@@ -3,8 +3,8 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'dev.kaepsis.kmanagers'
-version = '1.4'
+group = 'com.github.kaepsis'
+version = '1.5'
 description = "kmanagers"
 
 repositories {
@@ -17,14 +17,4 @@ repositories {
 
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.21.5-R0.1-SNAPSHOT'
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.release = 21
-}
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
-    }
 }
