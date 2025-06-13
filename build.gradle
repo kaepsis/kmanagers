@@ -1,9 +1,10 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'dev.kaepsis.kmanagers'
-version = '1.0-SNAPSHOT'
+version = '1.3'
 description = "kmanagers"
 
 repositories {
