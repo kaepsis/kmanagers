@@ -5,6 +5,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
@@ -72,6 +74,14 @@ public class Chat {
         Bukkit.getOnlinePlayers().stream()
                 .filter(player -> permission == null || player.hasPermission(permission))
                 .forEach(player -> send(player, message, placeholders));
+    }
+
+    public ArrayList<String> formatList(List<String> list, Object[] placeholders) {
+        return new ArrayList<String>(
+                list.stream()
+                        .map(line -> format(line, placeholders))
+                        .toList()
+        );
     }
 
 }
