@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.github.kaepsis'
-version = '1.7'
+version = '1.8'
 description = "kmanagers"
 
 repositories {
