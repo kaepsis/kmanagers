@@ -51,6 +51,13 @@ public class Chat {
         return ChatColor.translateAlternateColorCodes(COLOR_CHAR, sb.toString());
     }
 
+    public String removeColors(String message) {
+        if (message == null || message.isEmpty()) return "";
+        message = message.replaceAll("&#([A-Fa-f0-9]{6})", "");
+        message = message.replaceAll(COLOR_CHAR + "", "");
+        return message;
+    }
+
     public void send(CommandSender receiver, String message, Object... placeholders) {
         String modifiedMessage = format(message, placeholders);
         send(receiver, modifiedMessage);
