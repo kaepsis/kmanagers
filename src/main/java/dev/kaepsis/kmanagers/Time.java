@@ -1,5 +1,7 @@
 package dev.kaepsis.kmanagers;
 
+import java.time.Instant;
+
 public class Time {
 
     private static Time instance = null;
@@ -30,6 +32,18 @@ public class Time {
 
         return sb.toString().trim();
 
+    }
+
+    public long minecraftTimeToInstant(Instant now, String str) {
+        char lastChar = str.charAt(str.length() - 1);
+        long temporalAmount = Long.parseLong(str.substring(0, str.length() - 1));
+        return switch (lastChar) {
+            case 's' -> now.plusSeconds(temporalAmount).toEpochMilli();
+            case 'm' -> now.plusSeconds(temporalAmount * 60).toEpochMilli();
+            case 'h' -> now.plusSeconds(temporalAmount * 3600).toEpochMilli();
+            case 'd' -> now.plusSeconds(temporalAmount * 86400).toEpochMilli();
+            default -> -1L;
+        };
     }
 
 }
