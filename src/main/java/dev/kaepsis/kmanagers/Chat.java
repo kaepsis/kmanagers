@@ -83,7 +83,7 @@ public class Chat {
                 .forEach(player -> send(player, message, placeholders));
     }
 
-    public ArrayList<String> formatList(List<String> list, Object[] placeholders) {
+    public ArrayList<String> formatList(List<String> list, Object... placeholders) {
         return new ArrayList<String>(
                 list.stream()
                         .map(line -> format(line, placeholders))
