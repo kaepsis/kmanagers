@@ -84,9 +84,17 @@ public class Chat {
     }
 
     public ArrayList<String> formatList(List<String> list, Object... placeholders) {
-        return new ArrayList<String>(
+        return new ArrayList<>(
                 list.stream()
                         .map(line -> format(line, placeholders))
+                        .toList()
+        );
+    }
+
+    public ArrayList<String> colorList(List<String> list) {
+        return new ArrayList<>(
+                list.stream()
+                        .map(this::color)
                         .toList()
         );
     }
