@@ -35,8 +35,8 @@ public class ItemFactory {
         return this;
     }
 
-    public ItemFactory material(String material) {
-        item.setType(Material.matchMaterial(material));
+    public ItemFactory material(Material material) {
+        item.setType(material);
         return this;
     }
 
