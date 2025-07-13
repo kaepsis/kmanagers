@@ -30,7 +30,7 @@ public class ItemFactory {
         this.meta = item.getItemMeta();
     }
 
-    public ItemFactory name(String name, Object[] placeholders) {
+    public ItemFactory name(String name, Object... placeholders) {
         meta.setDisplayName(Chat.getInstance().format(name, placeholders));
         return this;
     }
@@ -45,7 +45,7 @@ public class ItemFactory {
         return this;
     }
 
-    public ItemFactory lore(List<String> lore, Object[] placeholders) {
+    public ItemFactory lore(List<String> lore, Object... placeholders) {
         meta.setLore(Chat.getInstance().colorList(Chat.getInstance().formatList(lore, placeholders)));
         return this;
     }
