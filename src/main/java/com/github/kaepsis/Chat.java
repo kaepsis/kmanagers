@@ -59,11 +59,13 @@ public class Chat {
     }
 
     public void send(CommandSender receiver, String message, Object... placeholders) {
+        if (message == null || message.isEmpty()) return;
         String modifiedMessage = format(message, placeholders);
         send(receiver, modifiedMessage);
     }
 
     public void send(CommandSender sender, String message) {
+        if (message == null || message.isEmpty()) return;
         sender.sendMessage(color(message));
     }
 
