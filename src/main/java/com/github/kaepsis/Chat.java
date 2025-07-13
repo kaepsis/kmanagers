@@ -1,4 +1,4 @@
-package dev.kaepsis.kmanagers;
+package com.github.kaepsis;
 
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;

@@ -3,8 +3,8 @@ plugins {
 }
 
 group = 'com.github.kaepsis'
-version = '1.8.4'
-description = "kmanagers"
+version = '1.9'
+description = "kutils"
 
 repositories {
     mavenCentral()
