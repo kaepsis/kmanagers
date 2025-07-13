@@ -1,5 +1,6 @@
 package com.github.kaepsis;
 
+import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -31,6 +32,11 @@ public class ItemFactory {
 
     public ItemFactory name(String name, Object[] placeholders) {
         meta.setDisplayName(Chat.getInstance().format(name, placeholders));
+        return this;
+    }
+
+    public ItemFactory material(String material) {
+        item.setType(Material.matchMaterial(material));
         return this;
     }
 
