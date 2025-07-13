@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.github.kaepsis'
-version = '1.9'
+version = '1.9.1'
 description = "kutils"
 
 repositories {
