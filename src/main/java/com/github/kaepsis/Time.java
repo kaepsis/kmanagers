@@ -2,7 +2,9 @@ package com.github.kaepsis;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 
 public class Time {
 
@@ -44,7 +46,9 @@ public class Time {
     }
 
     public String toFormattedDate(long millis) {
-        LocalDateTime localDateTime = LocalDateTime.from(Instant.ofEpochMilli(millis));
+        LocalDateTime localDateTime = Instant.ofEpochMilli(millis)
+                .atZone(ZoneId.systemDefault())
+                .toLocalDateTime();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return localDateTime.format(formatter);
     }
