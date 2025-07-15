@@ -10,20 +10,8 @@ import java.util.List;
 
 public class ItemFactory {
 
-    private ItemStack item;
-    private ItemMeta meta;
-
-    private static ItemFactory instance = null;
-
-    private ItemFactory() {
-    }
-
-    public static ItemFactory getInstance() {
-        if (instance == null) {
-            instance = new ItemFactory();
-        }
-        return instance;
-    }
+    private final ItemStack item;
+    private final ItemMeta meta;
 
     public ItemFactory(ItemStack item) {
         this.item = item;
