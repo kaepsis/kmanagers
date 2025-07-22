@@ -43,9 +43,9 @@ dependencies {
 </repository>
 
 <dependency>
-    <groupId>com.github.kaepsis</groupId>
-    <artifactId>kutils</artifactId>
-    <version>{VERSION}</version>
+<groupId>com.github.kaepsis</groupId>
+<artifactId>kutils</artifactId>
+<version>{VERSION}</version>
 </dependency>
 ```
 
@@ -53,16 +53,18 @@ dependencies {
 
 ## 📚 API Overview
 
+You can read Javadocs [here](<https://kaepsis.github.io/kutils/>)
+
 ### `ItemFactory`
 
 ```java
 ItemStack sword = new ItemFactory(new ItemStack(Material.DIAMOND_SWORD))
-    .name("&bEpic Sword")
-    .unbreakable(true)
-    .enchant(Enchantment.DAMAGE_ALL, 5, true)
-    .lore(List.of("&7Kills monsters", "&7Sharp as heck"))
-    .addItemFlag(ItemFlag.HIDE_ATTRIBUTES)
-    .build();
+        .name("&bEpic Sword")
+        .unbreakable(true)
+        .enchant(Enchantment.DAMAGE_ALL, 5, true)
+        .lore(List.of("&7Kills monsters", "&7Sharp as heck"))
+        .addItemFlag(ItemFlag.HIDE_ATTRIBUTES)
+        .build();
 ```
 
 ### `Chat`
