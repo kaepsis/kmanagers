@@ -53,6 +53,8 @@ dependencies {
 
 ## 📚 API Overview
 
+You can read Javadocs [here](<https://kaepsis.github.io/kutils/>)
+
 ### `ItemFactory`
 
 ```java
