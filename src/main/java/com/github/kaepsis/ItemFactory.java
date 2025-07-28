@@ -17,8 +17,24 @@ import java.util.List;
  */
 public class ItemFactory {
 
-    private final ItemStack item;
-    private final ItemMeta meta;
+    private ItemStack item;
+    private ItemMeta meta;
+
+    private static ItemFactory instance = null;
+
+    /**
+     * Gets the singleton instance of this class.
+     *
+     * @return the singleton instance of {@code ItemFactory}.
+     */
+    public static ItemFactory getInstance() {
+        if (instance == null) {
+            instance = new ItemFactory();
+        }
+        return instance;
+    }
+
+    private ItemFactory() {}
 
     /**
      * Creates a new {@code ItemFactory} for the given {@link ItemStack}.
