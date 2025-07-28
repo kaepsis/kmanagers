@@ -51,43 +51,6 @@ dependencies {
 
 ---
 
-## 📚 API Overview
-
-You can read Javadocs [here](<https://kaepsis.github.io/kutils/>)
-
-### `ItemFactory`
-
-```java
-ItemStack sword = new ItemFactory(new ItemStack(Material.DIAMOND_SWORD))
-        .name("&bEpic Sword")
-        .unbreakable(true)
-        .enchant(Enchantment.DAMAGE_ALL, 5, true)
-        .lore(List.of("&7Kills monsters", "&7Sharp as heck"))
-        .addItemFlag(ItemFlag.HIDE_ATTRIBUTES)
-        .build();
-```
-
-### `Chat`
-
-```java
-Chat.getInstance().send(player, "&aWelcome &b{name}&a!", "%name%", player.getName());
-
-String colored = Chat.getInstance().color("&bHello &#FF00FFworld");
-String stripped = Chat.getInstance().removeColors(colored);
-```
-
-### `Time`
-
-```java
-String formatted = Time.getInstance().strftime(7265000L); // "2h 1m 5s"
-
-long futureMillis = Time.getInstance().minecraftTimeToInstant(Instant.now(), "5m");
-
-String readableDate = Time.getInstance().toFormattedDate(futureMillis);
-```
-
----
-
 ## 🧪 Dependencies
 
 - Java 17+
