@@ -141,6 +141,17 @@ public class ItemFactory {
     }
 
     /**
+     * Adds an item flag to the item.
+     *
+     * @param flags A list of {@link ItemFlag} to add.
+     * @return This {@code ItemFactory} instance.
+     */
+    public ItemFactory addItemFlags(ItemFlag... flags) {
+        meta.addItemFlags(flags);
+        return this;
+    }
+
+    /**
      * Removes an item flag from the item.
      *
      * @param flag The {@link ItemFlag} to remove.
