@@ -6,6 +6,7 @@ Provides fluent item creation, advanced chat formatting (including hex colors), 
 ![img](https://img.shields.io/github/stars/kaepsis/kutils)
 ![img](https://img.shields.io/github/v/release/kaepsis/kutils)
 ![img](https://img.shields.io/github/downloads/kaepsis/kutils/total)
+[![](https://jitpack.io/v/kaepsis/kutils.svg)](https://jitpack.io/#kaepsis/kutils)
 
 ---
 
